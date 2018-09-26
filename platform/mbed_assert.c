@@ -26,7 +26,7 @@ void mbed_assert_internal(const char *expr, const char *file, int line)
     const char error_description[] = "Mbed assertation failed ";
     unsigned error_message_length = strlen(error_description) + strlen(expr) + 1;
     char error_message[error_message_length];
-    snprintf(error_message,error_message_length, "%s%s", error_description, expr);
+    snprintf(error_message, error_message_length, "%s%s", error_description, expr);
 
     mbed_error(MBED_ERROR_INVALID_ARGUMENT, error_message, 0, file, line);
 }
